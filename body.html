@@ -1,0 +1,33 @@
+<div class="app" id="app">
+  <header class="kopf">
+    <div class="marke"><b>Deep Learning 3D</b><span>Echte Netze zum Anfassen · L2 bis L5</span></div>
+    <div class="segment" id="modi" role="group" aria-label="Netz wählen">
+      <button type="button" data-modus="mlp" aria-pressed="true">Fully Connected</button>
+      <button type="button" data-modus="cnn" aria-pressed="false">CNN</button>
+      <button type="button" data-modus="rnn" aria-pressed="false">RNN · LSTM</button>
+    </div>
+    <div class="rechts">
+      <button type="button" class="knopf zart" id="b-heim" title="Kamera auf Startansicht"><svg viewBox="0 0 16 16"><path d="M8 1.5 1 7.6l1 1.1 1-.9V14h4V10h2v4h4V7.8l1 .9 1-1.1z"/></svg><span class="lang">Ansicht</span></button>
+    </div>
+  </header>
+  <main class="buehne" id="buehne">
+    <div class="etiketten" id="etiketten"></div>
+    <div class="tipp" id="tipp" hidden></div>
+    <div class="ablauf" id="ablauf" hidden></div>
+    <div class="dock" id="dock">
+      <div class="knopfreihe">
+        <button type="button" class="knopf haupt" id="b-train"></button>
+        <button type="button" class="knopf" id="b-schritt" title="Vorwärts, Loss, Rückwärts und ein Update, langsam gezeigt"><svg viewBox="0 0 16 16"><path d="M3 2.5v11l7-5.5zM11 2.5h2v11h-2z"/></svg><span class="lang">Ein Schritt</span></button>
+        <button type="button" class="knopf" id="b-vor" title="Vorwärtsdurchlauf für das gewählte Beispiel zeigen"><svg viewBox="0 0 16 16"><path d="M1 7h10V3.5L15.5 8 11 12.5V9H1z"/></svg><span class="lang">Vorwärts</span></button>
+        <button type="button" class="knopf" id="b-rueck" title="Rückwärtsdurchlauf (Backpropagation) zeigen"><svg viewBox="0 0 16 16"><path d="M15 7H5V3.5L.5 8 5 12.5V9h10z"/></svg><span class="lang">Rückwärts</span></button>
+        <button type="button" class="knopf" id="b-neu" title="Gewichte neu initialisieren"><svg viewBox="0 0 16 16"><path d="M8 2a6 6 0 1 0 6 6h-2a4 4 0 1 1-1.2-2.8L9 7h5V2l-1.8 1.8A6 6 0 0 0 8 2z"/></svg><span class="lang">Neu</span></button>
+      </div>
+      <div class="stand" id="stand"><span id="stand-text"></span><canvas id="spark" width="180" height="52" aria-hidden="true"></canvas></div>
+    </div>
+    <div class="lade" id="lade">3D-Szene wird geladen …</div>
+  </main>
+  <aside class="panel" id="panel">
+    <button type="button" class="panel-griff" id="griff" aria-label="Inspektor ein- oder ausklappen"></button>
+    <div id="inhalt"></div>
+  </aside>
+</div>
